@@ -9,15 +9,15 @@ function get_peakv_for_groupoutlier(folEPI)
 %==========================================================================
 % [ScaleFactors] = art_percentscale;
 
-folCon = strcat(folEPI,'\Preproc_con_despike\Suavizado8mm\1st_level_Mv_wmcsf_Regressor');
+folCon = strcat(folEPI,'\Preproc_sin_despike\Suavizado8mm\1st_level_Mv_wmcsf_Regressor');
 a = spm_select('FPList',folCon,'^con.*\.nii');
 
 if strcmp (a,'')
-    folCon = strcat(folEPI,'\Preproc_con_despike\Suavizado6mm\1st_level_Mv_wmcsf_Regressor');
+    folCon = strcat(folEPI,'\Preproc_sin_despike\Suavizado6mm\1st_level_Mv_wmcsf_Regressor');
     a = spm_select('FPList',folCon,'^con.*\.nii');
     
 elseif strcmp (a,'')
-    folCon = strcat(folEPI,'\Preproc_con_despike\Suavizado10mm\1st_level_Mv_wmcsf_Regressor');
+    folCon = strcat(folEPI,'\Preproc_sin_despike\Suavizado10mm\1st_level_Mv_wmcsf_Regressor');
     a = spm_select('FPList',folCon,'^con.*\.nii');
 end
 
