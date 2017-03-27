@@ -33,6 +33,7 @@ dirsuj = cellstr(mainfolder);
 lengthsuj = size(dirsuj);
 lengthsuj = lengthsuj(1);
 
+wb = waitbar(0,'First Level Analysis ...');
 
 for i = 1:lengthsuj
     
@@ -54,8 +55,8 @@ for i = 1:lengthsuj
     %r = reference slice
     
     %======================================================================
-    %aqui ya tendría las folEPI, tendría que buscar los directorios donde están
-    %los suavizados. Siempre serán Preproc_con_despike / Preproc_sin_despike
+    %aqui ya tendrÃ­a las folEPI, tendrÃ­a que buscar los directorios donde estÃ¡n
+    %los suavizados. Siempre serÃ¡n Preproc_con_despike / Preproc_sin_despike
     
     folder_d = strcat(folEPI,'\Preproc_con_despike\');
     folder_nd = strcat(folEPI,'\Preproc_sin_despike\');
@@ -417,9 +418,9 @@ for i = 1:lengthsuj
     end
     %----------------------------------------------------------------------
     
-     %Suavizado 10mm Sin despike-------------------------------------------
+     %Suavizado 12mm Sin despike-------------------------------------------
     
-    folder_sd_12 = strcat(folder_nd,'Suavizado10mm\');    
+    folder_sd_12 = strcat(folder_nd,'Suavizado12mm\');    
     [images_sd_12]= spm_select('FPList',folder_sd_12,'^sw.*\.nii');  
     images_sd_12 = cellstr(images_sd_12);
     
@@ -482,12 +483,12 @@ fprintf('%-40s: %30s\n','First Level Analysis Completed for all Subjects!',spm('
 
 fprintf('%-40s: %30s\n','Looking for outliers...',spm('time'))
 
-%Primero tiene que cargar todas las imágenes Con de todos los sujetos
+%Primero tiene que cargar todas las imÃ¡genes Con de todos los sujetos
 %--------------------------------------------------------------------------
 [list_imagecon,mean_peak_value,mainfolder] = get_con_images(directorio);
 
 
-%Se le pasa la función que detecta los outliers y saca una gráfica con
+%Se le pasa la funciÃ³n que detecta los outliers y saca una grÃ¡fica con
 %ellos
 %--------------------------------------------------------------------------
 
