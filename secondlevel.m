@@ -1,0 +1,416 @@
+function second_level_2s_Ttest(Outdir,group1,group2,age,gender,mask)
+
+%-----------------------------------------------------------------------
+% Job saved on 20-Mar-2017 15:21:00 by cfg_util (rev $Rev: 6460 $)
+% spm SPM - SPM12 (6906)
+% cfg_basicio BasicIO - Unknown
+%-----------------------------------------------------------------------
+matlabbatch{1}.spm.stats.factorial_design.dir = {'C:\RESTING_ERQ\2ndLevel_2sample\L_BL\'};
+%%
+matlabbatch{1}.spm.stats.factorial_design.des.t2.scans1 = {
+                                                           'C:\RESTING_ERQ\Controls\H_AAO_181115_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_AMR_251115_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_AST_270116_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_ECP_090316_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_EGL_041115_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_EGM_311012_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_EPA_181115_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_FGJ_111115_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_FRV_111115_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_GCP_021215_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_IVC_211015_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_JOG_211015_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_JPL_160316_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_JSC_021215_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_MOG_281015_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_PAO_071015_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_REG_170216_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_TPS_070116_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\H_XSM_270116_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_AGG_191212_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_AMG_010611_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_ANV_160113_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_CGC_281112_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_CGJ_110712_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_COI_110412_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_DAP_071112_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_DGG_121212_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_DLD_090113_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_DPB_090113_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_EMT_031212_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_EPB_311012_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_FET_281112_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_FSB_090113_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_HMM_101012_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_JGJ_110712_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_JRG_240512_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_LCC_171012_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_LGP_311012_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_MGC_260912_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_MIM_171012_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_MLF_180112_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_MMM_071112_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_MOS_031012_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_MSC_080212_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_OMH_031012_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_PCO_250511_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_PSM_241012_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Controls\PS_SBS_071112_C\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           };
+%%
+%%
+matlabbatch{1}.spm.stats.factorial_design.des.t2.scans2 = {
+                                                           'C:\RESTING_ERQ\Pacients\PS_AAG_290212_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_ABP_141211_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_ACB_210911_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_ACG_060711_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_ACR_280911_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_AGG_140711_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_AGM_280312_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_AMM_051212_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_AMR_140312_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_AMS_180112_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_APV_300113_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_ASG_140911_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_ATH_160512_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_BMG_051011_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_CBG_210312_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_CRG_241012_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_CTC_301111_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_DGE_160113_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_DJR_210911_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_DLC_211211_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_DMC_190213_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_EBT_231111_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_ECJ_130612_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_ECS_021111_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_EGG_080312_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_ELA_230113_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_EMC_300113_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_EPP_220611_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_FAN_301111_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_FSG_250112_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_FSR_190213_P_SIN3D\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_GCC_110112_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_GOG_191212_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_GRC_190912_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_IBV_010212_P_SIN3D\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_ITL_101012_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_JBP_080212_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_JGL_090512_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_JJG_281211_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_JLB_210711_P_SIN3D\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_JLR_051212_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_JLY_051212_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_JMM_080611_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_JMM_270612_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_JPR_230113_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_JRS_140911_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_JVR_250112_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_KL_060612_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_LCC_071211_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_MAC_141211_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_MCP_070312_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_MES_270711_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_MGF_180412_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_MIP_290212_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_MJP_211211_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_MME_191011_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_MOR_240512_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_MRP_161111_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_MRS_020512_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_MSS_180712_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_OCV_180712_P_SIN3D\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_PBV_210711_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_PMF_040712_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_PSB_110112_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_RFR_020512_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_RMM_200612_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_RSL_280312_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_RXS_130612_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_SBR_220212_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_SFP_091111_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_SGA_060711_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_SHG_300512_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_SIV_160512_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_SMC_261011_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_TAG_140312_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_VPM_150212_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           'C:\RESTING_ERQ\Pacients\PS_XMP_091111_P\RESTING\1stLevel_left_BLamygdala_roi_rp\con_0001.img,1'
+                                                           };
+%%
+matlabbatch{1}.spm.stats.factorial_design.des.t2.dept = 0;
+matlabbatch{1}.spm.stats.factorial_design.des.t2.variance = 1;
+matlabbatch{1}.spm.stats.factorial_design.des.t2.gmsca = 0;
+matlabbatch{1}.spm.stats.factorial_design.des.t2.ancova = 0;
+%%
+matlabbatch{1}.spm.stats.factorial_design.cov(1).c = [5.33
+                                                      4.33
+                                                      5.83
+                                                      5
+                                                      4.83
+                                                      4.83
+                                                      5
+                                                      5.17
+                                                      4
+                                                      4.83
+                                                      5.67
+                                                      4.5
+                                                      4.33
+                                                      5.17
+                                                      5.5
+                                                      5.5
+                                                      4.67
+                                                      4.5
+                                                      5.17
+                                                      2
+                                                      5.33
+                                                      4.17
+                                                      6
+                                                      6
+                                                      4.33
+                                                      6.17
+                                                      3.17
+                                                      4.67
+                                                      2.83
+                                                      4.5
+                                                      6
+                                                      4.83
+                                                      5.5
+                                                      4.83
+                                                      5.83
+                                                      2.17
+                                                      3.5
+                                                      3.33
+                                                      5.17
+                                                      4.33
+                                                      5.33
+                                                      5.17
+                                                      6.33
+                                                      5.17
+                                                      4
+                                                      5
+                                                      3
+                                                      4.5
+                                                      3.5
+                                                      2.83
+                                                      1.67
+                                                      5.17
+                                                      6.67
+                                                      3.83
+                                                      1.67
+                                                      2.17
+                                                      2
+                                                      5
+                                                      3.67
+                                                      4
+                                                      3.83
+                                                      2.33
+                                                      3
+                                                      5.5
+                                                      3.67
+                                                      4.67
+                                                      4.67
+                                                      1
+                                                      3.5
+                                                      2
+                                                      4.5
+                                                      1
+                                                      4.33
+                                                      3.17
+                                                      1.33
+                                                      1.83
+                                                      6
+                                                      4.67
+                                                      6
+                                                      3.67
+                                                      4.33
+                                                      2.67
+                                                      1.17
+                                                      5.5
+                                                      2.5
+                                                      5.17
+                                                      4.33
+                                                      1.67
+                                                      3.5
+                                                      2.17
+                                                      6.33
+                                                      3.67
+                                                      3.83
+                                                      4.17
+                                                      5
+                                                      1.17
+                                                      5
+                                                      4.5
+                                                      5.5
+                                                      1.83
+                                                      3
+                                                      3.83
+                                                      2.17
+                                                      6
+                                                      1
+                                                      5.5
+                                                      1
+                                                      1.33
+                                                      4.33
+                                                      3.33
+                                                      4.67
+                                                      4.5
+                                                      2.5
+                                                      1.17
+                                                      3.83
+                                                      3.83
+                                                      4.33
+                                                      7
+                                                      4.5
+                                                      5.17
+                                                      3.83
+                                                      4.67
+                                                      3.67
+                                                      3.33
+                                                      3.83];
+%%
+matlabbatch{1}.spm.stats.factorial_design.cov(1).cname = 'Reappraisal';
+matlabbatch{1}.spm.stats.factorial_design.cov(1).iCFI = 2;
+matlabbatch{1}.spm.stats.factorial_design.cov(1).iCC = 2;
+%%
+matlabbatch{1}.spm.stats.factorial_design.cov(2).c = [4.75
+                                                      2
+                                                      3.25
+                                                      2.25
+                                                      1.5
+                                                      4
+                                                      2.25
+                                                      3.25
+                                                      3.5
+                                                      4.75
+                                                      5.25
+                                                      2.25
+                                                      4
+                                                      1.5
+                                                      1
+                                                      3.25
+                                                      4.5
+                                                      5
+                                                      2.75
+                                                      2
+                                                      2.75
+                                                      3.5
+                                                      1.25
+                                                      2
+                                                      3.5
+                                                      3.75
+                                                      3
+                                                      2.75
+                                                      2
+                                                      4.75
+                                                      3.5
+                                                      4
+                                                      3.75
+                                                      1
+                                                      2.25
+                                                      2
+                                                      1
+                                                      2
+                                                      4
+                                                      2.75
+                                                      1.5
+                                                      4
+                                                      2.75
+                                                      3
+                                                      4
+                                                      3.5
+                                                      4.75
+                                                      2.5
+                                                      3.25
+                                                      5.75
+                                                      6
+                                                      4.75
+                                                      3.75
+                                                      4.75
+                                                      1.25
+                                                      2.75
+                                                      1
+                                                      7
+                                                      1.75
+                                                      5.25
+                                                      3.5
+                                                      3
+                                                      4
+                                                      1.25
+                                                      3.25
+                                                      4.75
+                                                      4.75
+                                                      2.5
+                                                      4.75
+                                                      1
+                                                      5
+                                                      1
+                                                      5.5
+                                                      5
+                                                      3
+                                                      6.75
+                                                      5
+                                                      2.25
+                                                      4.5
+                                                      3.5
+                                                      5.75
+                                                      4
+                                                      2.75
+                                                      4
+                                                      5.5
+                                                      6
+                                                      4
+                                                      4.25
+                                                      4.5
+                                                      3.5
+                                                      7
+                                                      3
+                                                      4.25
+                                                      4.75
+                                                      3.25
+                                                      3
+                                                      1.5
+                                                      4
+                                                      5.25
+                                                      1
+                                                      5.25
+                                                      3.75
+                                                      2
+                                                      1.5
+                                                      3.25
+                                                      4.25
+                                                      2.25
+                                                      1
+                                                      3
+                                                      2.5
+                                                      5
+                                                      5
+                                                      4.75
+                                                      2
+                                                      3.75
+                                                      3.75
+                                                      4
+                                                      5.5
+                                                      3
+                                                      5.5
+                                                      2.25
+                                                      5.25
+                                                      2
+                                                      3.75
+                                                      4.25];
+%%
+matlabbatch{1}.spm.stats.factorial_design.cov(2).cname = 'Suppression';
+matlabbatch{1}.spm.stats.factorial_design.cov(2).iCFI = 2;
+matlabbatch{1}.spm.stats.factorial_design.cov(2).iCC = 2;
+matlabbatch{1}.spm.stats.factorial_design.multi_cov = struct('files', {}, 'iCFI', {}, 'iCC', {});
+matlabbatch{1}.spm.stats.factorial_design.masking.tm.tm_none = 1;
+matlabbatch{1}.spm.stats.factorial_design.masking.im = 1;
+matlabbatch{1}.spm.stats.factorial_design.masking.em = {'C:\Program Files\MATLAB\R2013a\work\spm12\toolbox\FieldMap\brainmask.nii,1'};
+matlabbatch{1}.spm.stats.factorial_design.globalc.g_omit = 1;
+matlabbatch{1}.spm.stats.factorial_design.globalm.gmsca.gmsca_no = 1;
+matlabbatch{1}.spm.stats.factorial_design.globalm.glonorm = 1;
+
+
+
+end
