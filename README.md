@@ -8,3 +8,9 @@ ArtRepair toolbox: http://cibsr.stanford.edu/tools/human-brain-project/artrepair
 PhysIO toolbox: http://www.translationalneuromodeling.org/tnu-checkphysretroicor-toolbox/
 Rest: http://restfmri.net/forum/index.php
 MatLab
+
+In order to run the program, the main scripts are:
+
+For preprocessing: Preprocessing_run.m
+For first level: first_level_RS.m
+For second level: run_second_level.m
