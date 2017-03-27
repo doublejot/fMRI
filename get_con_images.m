@@ -43,18 +43,18 @@ end
 
 %Select all the Con images for the function
 
-folCon = strcat(folEPI,'\','\Preproc_con_despike\Suavizado8mm\1st_level_Mv_wmcsf_Regressor');
+folCon = strcat(folEPI,'\','\Preproc_sin_despike\Suavizado8mm\1st_level_Mv_wmcsf_Regressor');
 
 imagec = spm_select('FPList',folCon,'^con.*\.nii');
 imagecon{j,:} = imagec;
 
      if strcmp (imagec,'')
-         folCon = strcat(folEPI,'\Preproc_con_despike\Suavizado6mm\1st_level_Mv_wmcsf_Regressor');
+         folCon = strcat(folEPI,'\Preproc_sin_despike\Suavizado6mm\1st_level_Mv_wmcsf_Regressor');
          imagec = spm_select('FPList',folCon,'^con.*\.nii');
          imagecon{j,:} = imagec;
 
      elseif strcmp (imagec,'')
-         folCon = strcat(folEPI,'\Preproc_con_despike\Suavizado10mm\1st_level_Mv_wmcsf_Regressor');
+         folCon = strcat(folEPI,'\Preproc_sin_despike\Suavizado10mm\1st_level_Mv_wmcsf_Regressor');
          imagec = spm_select('FPList',folCon,'^con.*\.nii');
          imagecon{j,:} = imagec;
      end
